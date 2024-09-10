@@ -1,0 +1,17 @@
+.btn{
+	padding: 10px;
+	border: none;
+}
+
+.btn_rouge {
+	background-color: tomato;
+}
+
+.btn_bleu {
+	background: blue;
+	color: aliceblue;
+}
+
+.btn:hover {
+	background: grey;
+}
