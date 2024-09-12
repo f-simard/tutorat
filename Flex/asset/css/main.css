@@ -1,0 +1,86 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	width: 100%;
+}
+
+/* =========
+Article
+============*/
+.contenu{
+	display: flex;
+	gap: 20px;
+
+	background-color: aqua;
+
+	/* padding-inline: 80px; */
+
+	max-width: 80ch;
+	margin-inline: auto;
+
+
+}
+
+.contenu > aside {
+	flex-basis: 0;
+	flex-grow: 1;
+}
+
+.contenu > section {
+	flex-basis: 0;
+	flex-grow: 3;
+}
+
+/* =========
+grille
+============*/
+.grille {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 40px;
+}
+
+/* =========
+Article
+============*/
+.grille > article {
+
+	flex-basis: 0;
+	flex-grow: 1;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+article > picture {
+	/* flex basis est la taille de base de l'element-enfant
+	flex-basis = 0 => je demande a l'element de prendre 0 place au depart. Et de grandir selon la valeur du flex-grow */
+	flex-basis: 0;
+	flex-grow: 1;
+	/* flex grow est sur les enfant. Cela indique la proportion que je veux que l'enfant prenne dans mon conteneur parent (dans ce cas ci, article)
+	donc picture prend 1/4 et p prend 3/4 */
+
+	display: block;
+}
+
+article > picture > img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+article > p {
+	flex-basis: 0;
+	flex-grow: 3;
+}
+
+
+
