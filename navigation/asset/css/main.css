@@ -1,0 +1,73 @@
+/* ========
+Reset
+==========*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+svg {
+	max-width: 10ch;
+}
+
+body {
+	padding: 6vw;
+}
+
+/* ========
+nav
+==========*/
+
+nav {
+	position: relative;
+}
+
+.nav-principale a {
+	display: block;
+	padding: 0.5rem;
+	text-decoration: none;
+}
+
+.nav-principale a:hover {
+	background-color: aqua;
+}
+
+.nav-principale {
+	display: flex;
+	flex-direction: row;
+	gap: 5rem;
+	align-items: center;
+	justify-content: center;
+
+	background-color: cadetblue;
+	padding: 2rem;
+}
+
+[id="nav-bouton"] {
+	display: none;
+}
+
+@media (max-width: 700px) {
+	[id="nav-bouton"] {
+		display: initial;
+	}
+
+	.nav-principale {
+		flex-direction: column;
+
+		position: absolute;
+		/*inset: 0;*/
+		top:100%;
+		left: 0;
+		right: 0;
+		/* inset = 0, c'est l'equivalent de top = 0, bottom = 0, right = 0, left = 0*/
+	}
+
+	[id="nav-bouton"]:checked + .nav-principale {
+		opacity: 1;
+	}
+
+	[id="nav-bouton"]:not(:checked) + .nav-principale {
+		opacity: 0;
+	}
+}
