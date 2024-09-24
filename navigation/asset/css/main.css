@@ -32,6 +32,7 @@ nav {
 	background-color: aqua;
 }
 
+/* style pour la nav desktop */
 .nav-principale {
 	display: flex;
 	flex-direction: row;
@@ -52,22 +53,62 @@ nav {
 		display: initial;
 	}
 
+	/* style pour la nav en mode mobile */
 	.nav-principale {
 		flex-direction: column;
 
-		position: absolute;
-		/*inset: 0;*/
-		top:100%;
-		left: 0;
-		right: 0;
+		position: fixed;
+		inset: 0;
+		z-index: 10;
 		/* inset = 0, c'est l'equivalent de top = 0, bottom = 0, right = 0, left = 0*/
+
+		/*apparition avec opacité*/
+		transition-property: opacity;
+		transition-duration: 200ms;
+		transition-timing-function: ease-in-out;
 	}
 
-	[id="nav-bouton"]:checked + .nav-principale {
-		opacity: 1;
-	}
-
+		/* si etat du check box est coché, affiche nav, sinon affiche pas*/
 	[id="nav-bouton"]:not(:checked) + .nav-principale {
 		opacity: 0;
+		pointer-events: none;
 	}
+
+	/*placer le check box + changer apparence*/
+	[id="nav-bouton"] {
+
+		appearance: none;
+		cursor: pointer;
+
+		position: relative;
+		z-index: 20;
+
+		position: absolute;
+		right: 4vw;
+		top: 1vw;
+	}
+
+	/*utilisation pseudo element => ajouter du contenu qui n'existe pas dans le html*/
+	/* ::after -- pseudo contenu, ajoute a la fin du check box */
+	[id="nav-bouton"]::after {
+		content: "☰";
+		font-size: 2rem;
+
+		position: fixed;
+	}
+
+	/*changer l'apparence du checkbox lorsqu'il est checked aka lorsque le menu mobile est ouvert*/
+	[id="nav-bouton"]:checked::after {
+		content: "✖";
+		font-size: 2rem;
+	}
+
+}
+
+.test::after {
+	content: "✖";
+}
+
+.test::before {
+	content: "☰";
 }
