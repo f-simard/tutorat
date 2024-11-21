@@ -1,0 +1,11 @@
+.invisible{
+	visibility: hidden;
+}
+
+.visible{
+	display: block;
+}
+
+.bg-red{
+	background-color: tomato;
+}
