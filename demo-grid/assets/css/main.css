@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.grille{
+   display: grid;
+   gap: 1rem;
+   grid-template-columns: repeat(auto-fit, minmax(50ch, 1fr))
+}
+
+.grille > article:first-child{
+    grid-column: 1/3;
+}
+
+.grid-composition{
+    display: grid;
+    grid-template-areas: "patate patate"
+                "aside main"
+                "aside footer";
+}
+.grid-composition > header{
+    background-color: bisque;
+    grid-area: patate;
+}
+
+.grid-composition > main{
+    background-color: paleturquoise;
+    grid-area: main;
+}
+
+.grid-composition > aside{
+    background-color: palevioletred;
+    grid-area: aside;
+}
+
+.grid-composition > footer{
+    background-color: papayawhip;
+    grid-area: footer;
+}
+
