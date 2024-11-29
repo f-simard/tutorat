@@ -16,11 +16,11 @@
 
 header{
 	background-color: aquamarine;
-	order: 1;
 
 	@media screen and (max-width:850px) {
 		background-color: blueviolet;
 		position: sticky;
 		bottom: 0;
+		order: 1;
 	}
 }
