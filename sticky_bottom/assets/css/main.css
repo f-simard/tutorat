@@ -1,0 +1,26 @@
+.grid {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fill, minmax(50ch, 1fr));
+}
+
+.grid > :first-child {
+	grid-column: span 2;
+}
+
+.composition {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+header{
+	background-color: aquamarine;
+	order: 1;
+
+	@media screen and (max-width:850px) {
+		background-color: blueviolet;
+		position: sticky;
+		bottom: 0;
+	}
+}
