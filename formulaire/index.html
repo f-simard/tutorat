@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <script type="module" src="assets/js/main.js"></script>
+	 <link rel="stylesheet" href="assets/css/main.css">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Formulaire</h1>
+	<form>
+		<label for="nom">Nom</label>
+		<input type="text" name="nom" id="nom" required></input>
+		<label for="age">Age</label>
+		<input type="number" name="age" id="age">
+		<span class="invisible erreur" data-champ="age">Doit etre majeur</span>
+		<label for="email">email</label>
+		<input type="email" name="email" id="email">
+		<label for="acceptedCondition">Accepter les conditions</label>
+		<input type="checkbox" name="acceptedCondition" id="acceptedCondition" checked>
+		<fieldset>
+		<label for="chaud">chaud</label>
+		<input type="radio" name="temperature" id="chaud"></input>
+		<label for="froid">froid</label>
+		<input type="radio" name="temperature" id="froid"></input>
+		</fieldset>
+		<select name="fruitPref" id="">
+			<option value="pomme">Pomme</option>
+			<option value="poire">Poire</option>
+			<option value="banane" selected>Banane</option>
+		</select>
+		<button type="submit">Sumbit</button>
+	</form>
+</body>
+</html>

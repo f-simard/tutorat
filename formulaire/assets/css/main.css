@@ -1,0 +1,7 @@
+.invisible{
+	display: none;
+}
+
+.erreur {
+	background-color: tomato;
+}
